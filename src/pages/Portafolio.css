@@ -94,7 +94,8 @@
   position: relative;
 }
 
-.portfolio-card::before {
+/* Overlay sutil para el card general */
+.portfolio-card::after {
   content: '';
   position: absolute;
   top: 0;
@@ -120,16 +121,38 @@
 
 .card-image {
   position: relative;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   background: #000;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px) brightness(0.4);
+  z-index: 1;
+  transform: scale(1.2);
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio-card:hover .card-image img {
@@ -142,12 +165,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 3;
 }
 
 .portfolio-card:hover .card-overlay {
@@ -290,7 +314,7 @@
   }
   
   .card-image {
-    height: 180px;
+    height: 220px;
   }
   
   .card-content {

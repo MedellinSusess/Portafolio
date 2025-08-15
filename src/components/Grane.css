@@ -17,10 +17,10 @@
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
-  background: linear-gradient(135deg, var(--purple-deep), var(--brown-terracotta));
+  background: linear-gradient(135deg, var(--majora-purple), var(--majora-black));
   border-radius: 20px;
   overflow: hidden;
-  border: 3px solid var(--yellow-golden);
+  border: 3px solid var(--majora-gold);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   animation: slideIn 0.4s ease-out;
 }
@@ -29,24 +29,35 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--red-dark);
-  color: white;
-  border: 2px solid var(--yellow-golden);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
+  background: transparent;
+  color: #ff0000;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: none;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.grane-close:hover {
-  background: var(--brown-terracotta);
-  transform: scale(1.1);
+.grane-close:hover,
+.grane-close:focus,
+.grane-close:active {
+  background: transparent;
+  color: #ff0000;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
 }
 
 .grane-content {
@@ -54,7 +65,7 @@
 }
 
 .grane-title {
-  color: var(--yellow-golden);
+  color: var(--majora-gold);
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -127,13 +138,29 @@
   }
   
   .grane-close {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.8rem;
   }
   
   .grane-video,
   .grane-image {
     max-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .grane-close {
+    top: 0.3rem;
+    right: 0.3rem;
+    font-size: 1.5rem;
+  }
+  
+  .grane-title {
+    font-size: 1rem;
+  }
+  
+  .grane-content {
+    padding: 0.8rem;
   }
 }

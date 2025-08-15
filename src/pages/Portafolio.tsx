@@ -17,61 +17,138 @@ const Portafolio: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [isGraneOpen, setIsGraneOpen] = useState(false);
 
-  // Datos de ejemplo - Aquí puedes agregar tus proyectos reales
+  // Portfolio real con videos y tarifas de Luis Majoras
   const portfolioItems: PortfolioItem[] = [
+    // Tarifas y Servicios
     {
       id: 1,
-      title: 'Precios - Clips de Stream/Podcast',
-      description: 'Tabla de precios para edición de clips de streams y podcasts.',
-      category: 'clips',
+      title: 'Precios - Videos Verticales',
+      description: 'Tarifas para TikToks, Reels y Shorts - Contenido vertical optimizado.',
+      category: 'tarifas',
       type: 'image',
-      url: '/api/placeholder/800/600', // Reemplaza con tu imagen real
-      thumbnail: '/api/placeholder/400/300'
+      url: '/Media/Video Vertical.png',
+      thumbnail: '/Media/Video Vertical.png'
     },
     {
       id: 2,
-      title: 'Precios - Videos Verticales',
-      description: 'Tarifas para creación y edición de videos verticales (TikTok, Reels, Shorts).',
-      category: 'verticales',
-      type: 'image',
-      url: '/api/placeholder/800/600', // Reemplaza con tu imagen real
-      thumbnail: '/api/placeholder/400/300'
-    },
-    {
-      id: 3,
       title: 'Términos y Condiciones',
       description: 'Información sobre términos de servicio, políticas y condiciones de trabajo.',
       category: 'tarifas',
       type: 'image',
-      url: '/api/placeholder/800/600', // Reemplaza con tu imagen real
-      thumbnail: '/api/placeholder/400/300'
+      url: '/Media/terminos y condiciones.png',
+      thumbnail: '/Media/terminos y condiciones.png'
     },
     {
+      id: 3,
+      title: 'Precios - Clips de Stream/Podcast',
+      description: 'Tabla de precios para edición de clips de streams y podcasts.',
+      category: 'tarifas',
+      type: 'image',
+      url: '/Media/Clip.png',
+      thumbnail: '/Media/Clip.png'
+    },
+    
+    // Videos Verticales (TikToks, Reels, Shorts)
+    {
       id: 4,
-      title: 'Clip de Gaming - Highlights',
-      description: 'Edición dinámica de momentos destacados de streams de gaming.',
-      category: 'clips',
+      title: 'Temu - @punkmacarroni',
+      description: 'Video vertical promocional para TikTok/Reels con edición dinámica.',
+      category: 'verticales',
       type: 'video',
-      url: '/api/placeholder/video', // Reemplaza con tu video real
-      thumbnail: '/api/placeholder/400/300'
+      url: '/Media/temu@punkmacarroni.mp4',
+      thumbnail: '/Media/temu@punkmacarroni.png'
     },
     {
       id: 5,
-      title: 'TikTok Viral - Tendencias',
-      description: 'Video vertical optimizado para TikTok siguiendo tendencias actuales.',
+      title: 'Presentación - @mishishitas',
+      description: 'Video de presentación vertical con animaciones y transiciones.',
       category: 'verticales',
       type: 'video',
-      url: '/api/placeholder/video', // Reemplaza con tu video real
-      thumbnail: '/api/placeholder/400/300'
+      url: '/Media/presentación@mishishitas.mp4',
+      thumbnail: '/Media/presentación@mishishitas.png'
     },
     {
       id: 6,
-      title: 'Podcast Highlights',
-      description: 'Momentos destacados de podcast con animaciones y texto dinámico.',
+      title: 'Presentación - @annicitta_',
+      description: 'Video de introducción personalizado para redes sociales.',
+      category: 'verticales',
+      type: 'video',
+      url: '/Media/presentación@annicitta_.mp4',
+      thumbnail: '/Media/presentación@annicitta_.png'
+    },
+    {
+      id: 7,
+      title: 'Pokemon TCG - @punkmacarroni',
+      description: 'Contenido gaming vertical para TikTok con efectos especiales.',
+      category: 'verticales',
+      type: 'video',
+      url: '/Media/pokemonTCG@punkmacarroni.mp4',
+      thumbnail: '/Media/pokemonTCG@punkmacarroni.png'
+    },
+    {
+      id: 8,
+      title: 'Frieren - @elpsyotaku',
+      description: 'Video vertical de anime con edición cinematográfica.',
+      category: 'verticales',
+      type: 'video',
+      url: '/Media/frieren@elpsyotaku.mp4',
+      thumbnail: '/Media/frieren@ConductaVerbal.png'
+    },
+    {
+      id: 9,
+      title: 'Canto - @psiconido1',
+      description: 'Clip musical vertical con sincronización de audio.',
+      category: 'verticales',
+      type: 'video',
+      url: '/Media/canto@psiconido1.mp4',
+      thumbnail: '/Media/canto@psiconido1.png'
+    },
+    {
+      id: 10,
+      title: 'Consejos - @psiconido1',
+      description: 'Video educativo con overlays de texto y animaciones.',
+      category: 'verticales',
+      type: 'video',
+      url: '/Media/consejos@psiconido1.mp4',
+      thumbnail: '/Media/consejos@psiconido1.png'
+    },
+    
+    // Clips de Stream/Podcast
+    {
+      id: 11,
+      title: 'Pollito - @pinkbunnny11',
+      description: 'Clip destacado de stream con momentos divertidos.',
       category: 'clips',
       type: 'video',
-      url: '/api/placeholder/video', // Reemplaza con tu video real
-      thumbnail: '/api/placeholder/400/300'
+      url: '/Media/pollito@pinkbunnny11.mp4',
+      thumbnail: '/Media/pollito@pinkbunnny11.png'
+    },
+    {
+      id: 12,
+      title: 'Mando - @luis_majoras',
+      description: 'Clip gaming con reacciones y highlights del stream.',
+      category: 'clips',
+      type: 'video',
+      url: '/Media/mando@luis_majoras.mp4',
+      thumbnail: '/Media/mando@luis_majoras.png'
+    },
+    {
+      id: 13,
+      title: 'Traición - @luis_majoras',
+      description: 'Momento épico de gaming capturado en clip dinámico.',
+      category: 'clips',
+      type: 'video',
+      url: '/Media/traicion@luis_majoras.mp4',
+      thumbnail: '/Media/traicion@luis_majoras.png'
+    },
+    {
+      id: 14,
+      title: 'Delicioso - @ConductaVerbal',
+      description: 'Clip de podcast con edición de audio y visuales.',
+      category: 'clips',
+      type: 'video',
+      url: '/Media/delicioso@ConductaVerbal.mp4',
+      thumbnail: '/Media/delicioso@Conductaverbal.png'
     }
   ];
 
@@ -124,6 +201,7 @@ const Portafolio: React.FC = () => {
             <div 
               key={item.id} 
               className="portfolio-card"
+              style={{ '--bg-image': `url(${item.thumbnail})` } as React.CSSProperties}
               onClick={() => handleItemClick(item)}
             >
               <div className="card-image">
