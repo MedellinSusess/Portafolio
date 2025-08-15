@@ -21,11 +21,28 @@ const SobreMi: React.FC = () => {
     <div className="sobre-mi">
       <div className="container">
         <div className="hero-section">
-          <h1 className="section-title">Luis Majoras</h1>
-          <p className="section-subtitle">
-            Editor de video profesional con pasión por crear contenido
-            que impacta
-          </p>
+          <div className="profile-header">
+            <div className="profile-image-section">
+              <div className="profile-image-container">
+                <img 
+                    src="/Media/Logo e icono.jpg" 
+                  alt="Luis Majoras - Editor de Video Profesional" 
+                  className="profile-image"
+                />
+                <div className="profile-badge">
+                  <span className="badge-icon">🎬</span>
+                </div>
+              </div>
+            </div>
+            <div className="profile-info">
+              <h1 className="section-title">Luis Majoras</h1>
+              <div className="title-highlight">Editor de Video Profesional</div>
+              <p className="section-subtitle">
+                Especialista en contenido viral que conecta con tu audiencia.
+                Transformo ideas en videos dinámicos y atractivos.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="content-grid">

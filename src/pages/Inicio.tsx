@@ -29,17 +29,22 @@ const Inicio: React.FC = () => {
               </div>
             </div>
             <div className="hero-visual">
+              <div className="profile-section">
+                <div className="profile-image-container">
+                  <img 
+                    src="/Media/Logo e icono.jpg" 
+                    alt="Luis Majoras - Editor de Video" 
+                    className="profile-image"
+                  />
+                  <div className="profile-glow"></div>
+                </div>
+              </div>
               <div className="floating-elements">
                 <div className="floating-icon camera">📹</div>
                 <div className="floating-icon target">🎯</div>
                 <div className="floating-icon star">⭐</div>
                 <div className="floating-icon rocket">🚀</div>
                 <div className="floating-icon scissors">✂️</div>
-              </div>
-              <div className="main-circle">
-                <div className="inner-circle">
-                  <div className="editing-icon">🎬</div>
-                </div>
               </div>
             </div>
           </div>

@@ -7,8 +7,75 @@
 }
 
 .hero-section {
-  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
   margin-bottom: 2rem;
+  text-align: left;
+}
+
+.profile-image-section {
+  position: relative;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--majora-gold);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(255, 140, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, var(--majora-orange), var(--majora-gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.title-highlight {
+  font-size: 1.3rem;
+  color: var(--majora-orange);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .section-title {
@@ -214,8 +281,34 @@
     margin-bottom: 1.5rem;
   }
   
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-badge {
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  .badge-icon {
+    font-size: 1.2rem;
+  }
+  
   .section-title {
     font-size: 2rem;
+  }
+  
+  .title-highlight {
+    font-size: 1.1rem;
   }
   
   .section-subtitle {
