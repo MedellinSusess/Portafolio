@@ -17,6 +17,11 @@ const Portafolio: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [isGraneOpen, setIsGraneOpen] = useState(false);
 
+  // Función para codificar URLs correctamente
+  const encodeImageUrl = (url: string) => {
+    return url.replace(/\s+/g, '%20');
+  };
+
   // Portfolio real con videos y tarifas de Luis Majoras
   const portfolioItems: PortfolioItem[] = [
     // Tarifas y Servicios
@@ -201,7 +206,7 @@ const Portafolio: React.FC = () => {
             <div 
               key={item.id} 
               className="portfolio-card"
-              style={{ '--bg-image': `url(${item.thumbnail})` } as React.CSSProperties}
+              style={{ '--bg-image': `url("${encodeImageUrl(item.thumbnail)}")` } as React.CSSProperties}
               onClick={() => handleItemClick(item)}
             >
               <div className="card-image">
