@@ -1,0 +1,139 @@
+.grane-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.grane-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: linear-gradient(135deg, var(--purple-deep), var(--brown-terracotta));
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid var(--yellow-golden);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.4s ease-out;
+}
+
+.grane-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--red-dark);
+  color: white;
+  border: 2px solid var(--yellow-golden);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grane-close:hover {
+  background: var(--brown-terracotta);
+  transform: scale(1.1);
+}
+
+.grane-content {
+  padding: 2rem;
+}
+
+.grane-title {
+  color: var(--yellow-golden);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-container,
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.grane-video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  max-height: 70vh;
+  border-radius: 10px;
+}
+
+.grane-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.8) translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grane-container {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .grane-content {
+    padding: 1rem;
+  }
+  
+  .grane-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .grane-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .grane-video,
+  .grane-image {
+    max-height: 60vh;
+  }
+}

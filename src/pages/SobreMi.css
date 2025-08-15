@@ -1,0 +1,262 @@
+.sobre-mi {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background: linear-gradient(135deg, var(--majora-blue), var(--majora-black));
+  color: white;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--majora-gold);
+  text-shadow: 2px 2px 8px rgba(255, 140, 0, 0.5);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.story-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.story-card {
+  background: rgba(25, 25, 25, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid var(--majora-gold);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.story-card h3 {
+  color: var(--majora-gold);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.story-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background: linear-gradient(45deg, var(--majora-red), var(--majora-purple));
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid var(--majora-gold);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--majora-gold);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 500;
+}
+
+.skills-section h3 {
+  color: var(--yellow-golden);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 2px solid var(--green-lime);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(50, 205, 50, 0.3);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: white;
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  height: 10px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--majora-orange), var(--majora-gold));
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  animation: progressAnimation 2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.4);
+}
+
+.skill-percentage {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--majora-gold);
+  font-weight: 600;
+}
+
+@keyframes progressAnimation {
+  from { width: 0%; }
+  to { width: var(--final-width); }
+}
+
+/* Responsive */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .sobre-mi {
+    padding-top: 60px;
+  }
+  
+  .content-grid {
+    gap: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sobre-mi {
+    padding-top: 40px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .content-grid {
+    gap: 1.5rem;
+  }
+  
+  .story-card,
+  .skill-card {
+    padding: 1.2rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .story-card,
+  .skill-card {
+    padding: 1rem;
+  }
+  
+  .story-card h3,
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+}
