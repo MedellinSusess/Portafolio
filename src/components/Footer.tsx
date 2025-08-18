@@ -92,10 +92,8 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <div className="copyright">
-            <p>Desarrollado por: medeowo</p>
+            <p>© 2025 Luis Majoras - Editor de Video Profesional. Todos los derechos reservados.</p>
           </div>
-          <span className="copyright">© 2025 Luis Majoras - Editor de Video Profesional. Todos los derechos reservados.</span>
-
         </div>
       </div>
     </footer>
