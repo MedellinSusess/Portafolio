@@ -172,6 +172,42 @@
     0 0 40px rgba(255, 140, 0, 0.2);
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.email-format-box {
+  background: rgba(255,255,255,0.07);
+  border-left: 5px solid var(--yellow-golden);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 24px rgba(255, 140, 0, 0.08);
+  color: #fff;
+  font-size: 1.08rem;
+  width: 100%;
+}
+.email-format-box ul {
+  margin: 1rem 0 1.5rem 1.2rem;
+  padding: 0;
+  list-style: disc inside;
+}
+.email-format-box li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.email-format-box a {
+  color: var(--yellow-golden);
+  text-decoration: underline;
+  word-break: break-all;
+}
+.email-format-box a:hover {
+  color: var(--green-lime);
+}
+.email-format-box p {
+  margin-bottom: 0.7rem;
 }
 
 .contact-form-container::before {

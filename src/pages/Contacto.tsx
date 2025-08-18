@@ -1,29 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contacto.css';
 
 const Contacto: React.FC = () => {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    asunto: '',
-    mensaje: ''
-  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Datos del formulario:', formData);
-    alert('¡Mensaje enviado! Te contactaré pronto.');
-    setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
-  };
 
   const contactInfo = [
     {
@@ -96,64 +75,19 @@ const Contacto: React.FC = () => {
           </div>
 
           <div className="contact-form-container">
-            <h3>Envía tu Mensaje</h3>
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="nombre">Nombre</label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  value={formData.nombre}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Tu nombre completo"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="tu@email.com"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="asunto">Asunto</label>
-                <input
-                  type="text"
-                  id="asunto"
-                  name="asunto"
-                  value={formData.asunto}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="¿De qué quieres hablar?"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="mensaje">Mensaje</label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  value={formData.mensaje}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Cuéntame sobre tu proyecto, ideas, timeline, presupuesto, etc."
-                  rows={6}
-                />
-              </div>
-
-              <button type="submit" className="submit-btn">
-                Enviar Mensaje 🚀
-              </button>
-            </form>
+            <h3>¿Cómo enviar tu correo?</h3>
+            <div className="email-format-box">
+              <p>Para agilizar tu cotización, por favor incluye en tu correo:</p>
+              <ul>
+                <li><b>Nombre:</b> (Tu nombre o el de tu empresa)</li>
+                <li><b>Asunto:</b> (Motivo del contacto)</li>
+                <li><b>Descripción del proyecto:</b> (¿Qué necesitas? ¿Qué tipo de video? ¿Duración? ¿Plataforma?)</li>
+                <li><b>Presupuesto estimado:</b> (Opcional, pero ayuda a ajustar la propuesta)</li>
+                <li><b>Plazo o fecha límite:</b> (¿Para cuándo lo necesitas?)</li>
+                <li><b>Datos de contacto:</b> (Correo, redes, etc.)</li>
+              </ul>
+              <p>Puedes escribir directamente a <a href="mailto:contacto.luismajoras@gmail.com">contacto.luismajoras@gmail.com</a> o usar los enlaces de redes sociales.</p>
+            </div>
           </div>
         </div>
       </div>
