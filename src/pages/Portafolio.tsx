@@ -31,8 +31,8 @@ const Portafolio: React.FC = () => {
       description: 'Tarifas para TikToks, Reels y Shorts - Contenido vertical optimizado.',
       category: 'tarifas',
       type: 'image',
-      url: '/Media/Video Vertical.png',
-      thumbnail: '/Media/Video Vertical.png'
+      url: '/Media/Video Vertical.png', //Url de la imagen
+      thumbnail: '/Media/Video Vertical.png' //url de la miniatura
     },
     {
       id: 2,
@@ -40,8 +40,8 @@ const Portafolio: React.FC = () => {
       description: 'Información sobre términos de servicio, políticas y condiciones de trabajo.',
       category: 'tarifas',
       type: 'image',
-      url: '/Media/terminos y condiciones.png',
-      thumbnail: '/Media/terminos y condiciones.png'
+      url: '/Media/terminos y condiciones.png', //Url de la imagen
+      thumbnail: '/Media/terminos y condiciones.png' //url de la miniatura
     },
     {
       id: 3,
@@ -49,8 +49,8 @@ const Portafolio: React.FC = () => {
       description: 'Tabla de precios para edición de clips de streams y podcasts.',
       category: 'tarifas',
       type: 'image',
-      url: '/Media/Clip.png',
-      thumbnail: '/Media/Clip.png'
+      url: '/Media/Clip.png', //Url de la imagen
+      thumbnail: '/Media/Clip.png' //url de la miniatura
     },
     
     // Videos Verticales (TikToks, Reels, Shorts)
@@ -60,8 +60,8 @@ const Portafolio: React.FC = () => {
       description: 'Video vertical promocional para TikTok/Reels con edición dinámica.',
       category: 'verticales',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532273/temu_punkmacarroni_laiike.mp4',
-      thumbnail: '/Media/temu@punkmacarroni.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532273/temu_punkmacarroni_laiike.mp4', //Url del video
+      thumbnail: '/Media/temu@punkmacarroni.png' //Url de la miniatura
     },
     {
       id: 5,
@@ -69,8 +69,8 @@ const Portafolio: React.FC = () => {
       description: 'Video de presentación vertical con animaciones y transiciones.',
       category: 'verticales',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532124/presentaci%C3%B3n_mishishitas_zozasu.mp4',
-      thumbnail: '/Media/presentación@mishishitas.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532124/presentaci%C3%B3n_mishishitas_zozasu.mp4', //Url del video
+      thumbnail: '/Media/presentación@mishishitas.png' //Url de la miniatura
     },
     {
       id: 6,
@@ -79,7 +79,7 @@ const Portafolio: React.FC = () => {
       category: 'verticales',
       type: 'video',
       url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532136/presentaci%C3%B3n_annicitta__lodt4v.mp4',
-      thumbnail: '/Media/presentación@annicitta_.png'
+      thumbnail: '/Media/presentación@annicitta_.png' //Url de la miniatura
     },
     {
       id: 7,
@@ -87,8 +87,8 @@ const Portafolio: React.FC = () => {
       description: 'Contenido gaming vertical para TikTok con efectos especiales.',
       category: 'verticales',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532180/pokemonTCG_punkmacarroni_dgdwn0.mp4',
-      thumbnail: '/Media/pokemonTCG@punkmacarroni.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532180/pokemonTCG_punkmacarroni_dgdwn0.mp4', //Url del video
+      thumbnail: '/Media/pokemonTCG@punkmacarroni.png' //Url de la miniatura
     },
     {
       id: 8,
@@ -96,8 +96,8 @@ const Portafolio: React.FC = () => {
       description: 'Video vertical de anime con edición cinematográfica.',
       category: 'verticales',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755533849/frieren-elpsyotaku_tgNkndJC_qkf9lm.mp4',
-      thumbnail: '/Media/frieren@ConductaVerbal.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755533849/frieren-elpsyotaku_tgNkndJC_qkf9lm.mp4', //Url del video
+      thumbnail: '/Media/frieren@ConductaVerbal.png' //Url de la miniatura
     },
     {
       id: 9,
@@ -106,7 +106,7 @@ const Portafolio: React.FC = () => {
       category: 'verticales',
       type: 'video',
       url: 'https://res.cloudinary.com/dstrdougk/image/upload/v1755534261/canto_psiconido1_za0zqy.png',//Url  del video
-      thumbnail: '/Media/canto@psiconido1.png'//
+      thumbnail: '/Media/canto@psiconido1.png'//Url de la miniatura
     },
     {
       id: 10,
@@ -114,8 +114,8 @@ const Portafolio: React.FC = () => {
       description: 'Video educativo con overlays de texto y animaciones.',
       category: 'verticales',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755535014/consejos-psiconido1_xB18yhvj_bzqaag.mp4',
-      thumbnail: '/Media/consejos@psiconido1.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755535014/consejos-psiconido1_xB18yhvj_bzqaag.mp4', //Url del video
+      thumbnail: '/Media/consejos@psiconido1.png' //Url de la miniatura
     },
     
     // Clips de Stream/Podcast
@@ -125,8 +125,8 @@ const Portafolio: React.FC = () => {
       description: 'Clip destacado de stream con momentos divertidos.',
       category: 'clips',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532139/pollito_pinkbunnny11_z4zqip.mp4',
-      thumbnail: '/Media/pollito@pinkbunnny11.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532139/pollito_pinkbunnny11_z4zqip.mp4', //Url del video
+      thumbnail: '/Media/pollito@pinkbunnny11.png' //Url de la miniatura
     },
     {
       id: 12,
@@ -134,8 +134,8 @@ const Portafolio: React.FC = () => {
       description: 'Clip gaming con reacciones y highlights del stream.',
       category: 'clips',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532144/mando_luis_majoras_jzcapc.mp4',
-      thumbnail: '/Media/mando@luis_majoras.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532144/mando_luis_majoras_jzcapc.mp4', //Url del video
+      thumbnail: '/Media/mando@luis_majoras.png' //Url de la miniatura
     },
     {
       id: 13,
@@ -143,8 +143,8 @@ const Portafolio: React.FC = () => {
       description: 'Momento épico de gaming capturado en clip dinámico.',
       category: 'clips',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532199/traicion_luis_majoras_wcqllr.mp4',
-      thumbnail: '/Media/traicion@luis_majoras.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532199/traicion_luis_majoras_wcqllr.mp4', //Url del video
+      thumbnail: '/Media/traicion@luis_majoras.png' //Url de la miniatura
     },
     {
       id: 14,
@@ -152,8 +152,8 @@ const Portafolio: React.FC = () => {
       description: 'Clip de podcast con edición de audio y visuales.',
       category: 'clips',
       type: 'video',
-      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532207/delicioso_ConductaVerbal_q10weg.mp4',
-      thumbnail: '/Media/delicioso@Conductaverbal.png'
+      url: 'https://res.cloudinary.com/dstrdougk/video/upload/v1755532207/delicioso_ConductaVerbal_q10weg.mp4', //Url del video
+      thumbnail: '/Media/delicioso@Conductaverbal.png' //Url de la miniatura
     }
   ];
 
