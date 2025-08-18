@@ -27,13 +27,13 @@
 
 .grane-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: .6rem;
+  right: .6rem;
   background: transparent;
   color: #ff0000;
   border: none;
   outline: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: normal;
   font-family: Arial, sans-serif;
   cursor: pointer;
@@ -152,8 +152,8 @@
 @media (max-width: 480px) {
   .grane-close {
     top: 0.3rem;
-    right: 0.3rem;
-    font-size: 1.5rem;
+    right: 0.5rem;
+    font-size: 1.1rem;
   }
   
   .grane-title {
