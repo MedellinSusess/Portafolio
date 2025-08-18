@@ -29,13 +29,6 @@ const Footer: React.FC = () => {
     }
   ];
 
-  const quickLinks = [
-    { name: 'Inicio', url: '/' },
-    { name: 'Sobre Mí', url: '/sobre-mi' },
-    { name: 'Portafolio', url: '/portafolio' },
-    { name: 'Contacto', url: '/contacto' }
-  ];
-
   return (
     <footer className="footer">
       <div className="container">
@@ -70,13 +63,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Enlaces Rápidos</h4>
             <ul className="quick-links">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a href={link.url}>{link.name}</a>
-                </li>
-              ))}
             </ul>
           </div>
 
@@ -105,15 +92,10 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <div className="copyright">
-            <p>© 2025 Luis Majoras - Editor de Video Profesional. Todos los derechos reservados.</p>
-            <p className="zelda-tribute">
-              Inspirado en la paleta de colores de Majora's Mask ⚔️
-            </p>
+            <p>Desarrollado por: medeowo</p>
           </div>
-          <div className="footer-links">
-            <a href="/terminos">Términos y Condiciones</a>
-            <a href="/privacidad">Política de Privacidad</a>
-          </div>
+          <span className="copyright">© 2025 Luis Majoras - Editor de Video Profesional. Todos los derechos reservados.</span>
+
         </div>
       </div>
     </footer>
